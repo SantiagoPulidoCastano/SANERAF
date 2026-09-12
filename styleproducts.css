@@ -33,7 +33,6 @@ body {
       overflow-x: hidden; 
     }
 
-
 .logo{
   display: flex;
   margin: 0;
@@ -71,95 +70,125 @@ nav a {
   padding: 14px 16px;
 }
 
-.banner{
-  min-height: 500px;
-  background-image: url(IMG/Mini.png);
-  background-size: cover;
-  background-position: center;
-  display:flex;
+#Destacado {
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 0 2rem 2rem;
+  background-color: var(--surface);
+  border:4px solid #000;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 6px 6px 0px #000;
+  overflow: hidden;
+}
+
+
+#Destacado h2 {
+  color: var(--black);
+  background-color: var(--blue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-bottom: 5px solid var(--black);
+  padding: 1rem;
+  margin: 0 -2rem 1.5rem;
+}
+
+#Nuevo{
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 0 2rem 2rem;
+  background-color: var(--surface);
+  border:4px solid #000;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 6px 6px 0px #000;
+  overflow: hidden;
+}
+
+#Nuevo h2{
+  color: var(--black);
+  background-color: var(--red);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-bottom: 5px solid var(--black);
+  padding: 1rem;
+  margin: 0 -2rem 1.5rem;
+}
+
+
+.galeria{
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  margin: 0.2rem auto;
+  gap: 50px;
+  flex-wrap: wrap;
+  object-fit: cover;
 }
 
-.conoce {
-  max-width: 70%;
-  margin: 2rem auto;
-  padding: 0 2rem 2rem;
-  background-color: var(--surface);
-  border:4px solid #000;
+
+img.gogeta {
+  max-width: 150px;
+  height: 200px;
+  display: block;
   border-radius: 1px;
-  text-align: center;
   box-shadow: 6px 6px 0px #000;
-  overflow: hidden;
-}
-.conoce a{
-  color: var(--black);
-  background-color: var(--purple-light);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  border:4px solid #000;
-  border-width: 2.5px;
-  border-style: solid;
-  border-radius: 1px;
-  box-shadow: 0px 4px 0px #000;
-  padding: 0.5rem;
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.conoce h2{
-  color: var(--black);
-  background-color: var(--purple);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  border: none;
-  border-bottom: 5px solid var(--black);
-  padding: 1rem;
-  margin: 0 -2rem 1.5rem;
-}
-
-.terminos {
-  max-width: 70%;
-  margin: 2rem auto;
-  padding: 0 2rem 2rem;
-  background-color: var(--surface);
-  border:4px solid #000;
+img.vegito{
+  max-width: 150px;
+  height: 200px;
+  display: block;
   border-radius: 1px;
-  text-align: center;
   box-shadow: 6px 6px 0px #000;
-  overflow: hidden;
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.terminos h2{
-  color: var(--black);
-  background-color: var(--orange);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  border: none;
-  border-bottom: 5px solid var(--black);
-  padding: 1rem;
-  margin: 0 -2rem 1.5rem;
+img.god {
+  max-width: 150px;
+  height: 200px;
+  display: block;
+  border-radius: 1px;
+  box-shadow: 6px 6px 0px #000;
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+img.broly { 
+  max-width: 150px;
+  height: 200px;
+  display: block;
+  border-radius: 1px;
+  box-shadow: 6px 6px 0px #000;
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 
 footer {
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--green);
   color: black;
   padding: 1rem;
-   border: none;
-  border-top: 5px solid var(--black);
-  margin: 0 -2rem 1.5rem;
+  margin-top: 20rem;
+  border: #000;
+  border-width: 4px;
+  border-style: solid;
+  box-shadow: 6px 6px 0px #000;
 }
 
 nav ul li a:hover{
   background-color: var(--yellow);
-  border: #000;
-  border-width: 3px;
+   border: #000;
+  border-width: 4px;
   border-style: solid;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 6px 6px 0px #000;
 }
 
 #progress-bar {

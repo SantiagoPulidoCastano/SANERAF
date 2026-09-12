@@ -7,43 +7,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Santiago Pulido Castaño">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Bebas+Neue&amp;family=Carter+One&amp;family=DM+Sans:wght@400;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;700&amp;family=Outfit:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
+ 
+
+  <nav> 
+     <div id="progress-bar"></div>
+   <a href="#" class="logo" alt="logo">SANERAF</a>
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#Destacado">Destacado</a></li>
+      <li><a href="#terminos">Terminos y Condiciones</a></li>
       <li><a href="#derechos">Derechos de Autor</a></li>
+
+    <!--Hacer modo oscuro-->
+      <li><a href="#toggle">X</a></li>
     </ul>
   </nav>
 
-  <header>
-      <div class="inicio" id="inicio">
-        <h1>Bienvenido a SANERAF</h1>
-        <p>Conoce la magia de las figuras.</p>
-      </div>
-  </header>
-
 <main>
-      <section id="fusiones">
-        <div class="fusiones">
-        <h2> Fusiones más adquiridas</h2>
-      </div>
-      <section class ="Destacado"id="Destacado">
-    <div class="galeria">
-        <div class="borde-gogeta">
-        <img class="gogeta" src="IMG/Gogeta.jpg" alt="Gogeta">
-        </div>
+        
+        <section class="banner" id="banner">
+          <a href="productos.html" class="boton"></a>
+        </section>
+        
+        <section class="conoce" id="conoce">
+            <h2> ¡Conoce la magia de las figuras!</h2>
+            <p> En <em><strong>SANERAF</strong></em> podrás encontrar una enorme cantidad de productos relacionados con el ámbito de la colección de figuras, aquí podrás encontrar las figuras de tus personajes favoritos.</p>
+            <a href="productos.html" class="boton"> Conoce nuestros productos</a>
+        </section>
+        </div>
 
-        <div class="borde-vegito">
-        <img class="vegito" src="IMG/Vegito.jpg" alt="Vegito">
-        </div>
-
-        </div>
-    </div>
-      </section>
+          <section class="terminos" id="terminos">
+            <h2> Terminos y condiciones </h2>
+            <p>A continuaciòn presentaremos nuestros terminos y condiciones, asì que al acceder a esta pàgina el usuario acepta de manera explicita estos terminos y condiciones para un mejor uso. Si se siente en desacuerdo con algina parte del texto, te pedimos dejar tù sugerencia o hablar directamente, de lo contrario no podras acceder a nuestros productos.<br><br>
+             <strong> 1. Productos y disponibilidad: </strong> las imàgenes de las figuras so lo màs fieles posibles al producto real;los colores o acabados pueden variar de vido a la iluminaciòn o la pantalla<br><br>
+             <strong> 2. Preventas y envìos: </strong> las fechas de llegada de figuras en preventa son estimadas y dependen totalmente del fabricante y el distribuidor. los tiempo de entrega en los envios se realizan a travès de empresas de mensajerìa externas. los tiempos indicados son aproximados y la empresa no se hace responsable por retrasos agenos a nuestra gestiòn.<br><br>
+             <strong> 3. Polìticas de devoluciòn y cancelaciòn:</strong> Aclarar si la garantia cubre defectos de fabricacion en la figura o tambien los detalles en el empaque. antes del envio puedes cancelar tu pedido antes de que sea despachado y recibir un rembolso completo si se cumplen los requisistos.<br><br>
+             <strong> 4.defectos de fabricacion y cajas:</strong> Vvariaciones minimas en la pintura o marcas de molde son inheerentes al proceso de fabricacion y no se considera defectos. las abuyaduras o marcas menores en laja de carton protectora no aplican para devolucion si la figura interna esta en perfecto estado.la garantia aplica unicamente para piesas faltastantes o roturas de origen dentro de empaque sellados.<br><br>
+             
+          <input type="radio"name="acepto" id="idacepto" checked="checked">Acepto
+          <input type="radio"name="acepto" id="idnoacepto" checked="checked">No Acepto
+        </section>
+      </div>
 </main>
 
   <footer>
@@ -53,41 +59,7 @@
     </div>
   </footer>
 
-  <dialog id="modal-figura" class="modal-comic">
-    <button id="cerrar-modal" class="cerrar-modal">X</button>
-    <div class="contenido-modal">
-      <img id="imagen-modal" src="" alt="Figura">
-      <div class="informacion-modal">
-        <h3 id="nombre-figura">Nombre</h3>
-        <p id="descripcion-figura">Descripción</p>
-        <span id="modal-precio">Precio</span>
-      </div>
-    </div>
-
-
-
-  </dialog>
-  <script>
-  const modal = document.getElementById('modal-figura');
-  const btnCerrar = document.getElementById('cerrar-modal');
-
-  document.querySelectorAll('.img-comic').forEach(imagen => {
-    imagen.addEventListener('click', () => {
-      document.getElementById('modal-img').src = imagen.src;
-      document.getElementById('modal-titulo').textContent = imagen.dataset.titulo;
-      document.getElementById('modal-desc').textContent = imagen.dataset.desc;
-      document.getElementById('modal-precio').textContent = imagen.dataset.precio;
-      
-      modal.showModal();
-    });
-  });
-
-  btnCerrar.addEventListener('click', () => modal.close());
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.close();
-  });
-</script>
+<script script src="functions.js"></script>
 
 </body>
 </html>
