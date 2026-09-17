@@ -25,19 +25,37 @@
     --font-logo: 'Carter One';
 }
 
+html,body{
+  min-height: 100%;
+  margin: 0;
+}
+
 body {
+      display:flex;
+      flex-direction: column;
       background-color: var(--surface);
       font-family:'Inter', sans-serif;
       margin: 0;
       min-height: 100vh; 
       overflow-x: hidden; 
+      
     }
+  
+main{
+  flex: 1;
+}
 
 .logo{
   display: flex;
   margin: 0;
   font-family: 'Carter One', cursive;
   font-size: 1.5em
+}
+
+.carrito{
+  display: flex;
+  margin: 0;
+
 }
 
 nav {
@@ -70,6 +88,11 @@ nav a {
   padding: 14px 16px;
 }
 
+nav ul li:nth-child(4) {
+    position: absolute;
+    right: 2rem;
+}
+
 #Destacado {
   max-width: 70%;
   margin: 2rem auto;
@@ -85,7 +108,7 @@ nav a {
 
 #Destacado h2 {
   color: var(--black);
-  background-color: var(--blue);
+  background-color: var(--white);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
@@ -109,7 +132,7 @@ nav a {
 
 #Nuevo h2{
   color: var(--black);
-  background-color: var(--red);
+  background-color: var(--white);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
@@ -129,15 +152,18 @@ nav a {
   object-fit: cover;
 }
 
-
 img.gogeta {
   max-width: 150px;
   height: 200px;
   display: block;
   border-radius: 1px;
-  box-shadow: 6px 6px 0px #000;
   transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px solid var(--black);
+}
+
+#gogeta:hover{
+  box-shadow: 5px 5px 0px var(--black);
 }
 
 img.vegito{
@@ -145,9 +171,13 @@ img.vegito{
   height: 200px;
   display: block;
   border-radius: 1px;
-  box-shadow: 6px 6px 0px #000;
   transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px solid var(--black);
+}
+
+#vegito:hover{
+box-shadow: 5px 5px 0px var(--black);
 }
 
 img.god {
@@ -155,9 +185,13 @@ img.god {
   height: 200px;
   display: block;
   border-radius: 1px;
-  box-shadow: 6px 6px 0px #000;
   transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px solid var(--black);
+}
+
+#god:hover{
+box-shadow: 5px 5px 0px var(--black);
 }
 
 img.broly { 
@@ -165,30 +199,44 @@ img.broly {
   height: 200px;
   display: block;
   border-radius: 1px;
-  box-shadow: 6px 6px 0px #000;
   transform: rotate(-1deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px solid var(--black);
+}
+
+#broly:hover{
+box-shadow: 5px 5px 0px var(--black);
 }
 
 
 footer {
-  text-align: center;
-  background-color: var(--green);
-  color: black;
-  padding: 1rem;
-  margin-top: 20rem;
-  border: #000;
-  border-width: 4px;
-  border-style: solid;
-  box-shadow: 6px 6px 0px #000;
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-top: 5px solid black;
+    margin: 0;
+    overflow: hidden;
+}
+
+footer h2 {
+    margin: 0 0 15px;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 nav ul li a:hover{
   background-color: var(--yellow);
-   border: #000;
+   border: var(--black);
   border-width: 4px;
   border-style: solid;
-  box-shadow: 6px 6px 0px #000;
+  box-shadow: 4px 4px 0px --black;
 }
 
 #progress-bar {
@@ -198,5 +246,5 @@ nav ul li a:hover{
   width: var(--scrollAmount);
   height: 5px;
   z-index: 9999;
-  background-image: linear-gradient(to right, var(--orange), var(--red));
+  background-image: linear-gradient(to right, var(--yellow), var(--orange)  ,var(--red));
 }
