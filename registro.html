@@ -6,7 +6,7 @@
   <title>SANERAF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Santiago Pulido Castaño">
-  <link rel="stylesheet" href="stylelogin.css">
+  <link rel="stylesheet" href="styleregistro.css">
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Bebas+Neue&amp;family=Carter+One&amp;family=DM+Sans:wght@400;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;700&amp;family=Outfit:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
 </head>
 
@@ -19,7 +19,28 @@
   </nav>
 
 <main>
+        <div class="registro" id="registro">
+            <h2> Registrate para continuar al inicio de sesion</h2>
 
+            <form action="login.html" method="get">
+            <label for="name"><strong>Nombre completo :</strong></label><br><br>
+            <input type="text" id="name" placeholder="Nombre completo" required><br><br>
+
+            <label for="email"><strong>Correo electrónico :</strong></label><br><br>
+            <input type="email" id="email" placeholder="Correo electrónico" required><br><br>
+
+            <label for="password"><strong>Contraseña:</strong></label><br><br>
+            <input type="password" id="password" placeholder="Contraseña" required><br><br>
+
+            <label for="confirm-password"><strong>Confirma tu contraseña:</strong></label><br><br>
+            <input type="password" id="confirm-password" placeholder="Confirma tu contraseña" required><br><br>
+
+            <button type="submit" id="entrar">Entrar</button><br><br>
+
+            <a href="pterminos.html" id="pterms" class="pterms" alt="pterms">Terminos y condiciones</a>
+            <a href="login.html" id="registrobutton" class="registrobutton" alt="registro">¿Ya tienes cuenta? Inicia sesión</a>
+            </form>
+        </div>
 </main>
 
 <footer>

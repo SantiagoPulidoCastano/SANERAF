@@ -52,10 +52,17 @@ main{
   font-size: 1.5em
 }
 
-.carrito{
-  display: flex;
-  margin: 0;
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
 
+.carrito img {
+    width: 45px;
+    height: 45px;
+    display: block;
 }
 
 nav {
@@ -88,6 +95,10 @@ nav a {
   padding: 14px 16px;
 }
 
+nav ul li:nth-child(3) {
+    position: absolute;
+    right: 15rem;
+}
 nav ul li:nth-child(4) {
     position: absolute;
     right: 2rem;
